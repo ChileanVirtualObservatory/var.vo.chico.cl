@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:n="http://nevow.com/ns/nevow/0.1">
+<head n:render="commonhead">
+	<title n:render="titlemessage"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/style-error.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/withoutsidebar.css"/>
+</head>
+<body>
+	<header class="topbar">
+		<img src="/static/img/logo_chivo.png" alt="[operator logo]" n:render="rootlink" class="logo headlinelogo"/>
+		<!--<h1 id="pagehead" n:render="prependsite"/>-->
+	</header>
+	<div id="page-content">
+		<h1><n:invisible n:render="titlemessage"/> <span><n:invisible n:render="string" n:data="status"/></span></h1>
+		<p n:render="beforeMessage" />
+		<div class="errors" n:render="message"/>
+		<p n:render="afterMessage"/>
+		<n:invisible n:render="footer"/>
+	</div>
+	<n:invisible n:render="commonfoot"/>
+</body>
+</html>

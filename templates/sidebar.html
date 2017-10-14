@@ -1,0 +1,55 @@
+<!-- a template for a DaCHS sidebar.
+Use renderers from grend.GavoRenderMixin here -->
+<n:invisible xmlns:n="http://nevow.com/ns/nevow/0.1" xmlns="http://www.w3.org/1999/xhtml">
+	<div id="aside-spacer"><div class="aside-inner-spacer"></div></div>
+	<aside id="sidebar">
+		<header class="sidebaritem">
+			<a href="/" n:render="rootlink">
+				<img src="/static/img/logo_sidebar.png" class="silentlink sidebarlogo" n:render="rootlink" alt="[Operator logo]" />
+			</a>
+			<a href="/" n:render="rootlink">
+				<h2 n:render="prependsite" />
+			</a>
+			<a href="#body" class="invisible">Skip Header</a>
+		</header>
+		<div class="sidebaritem">
+			<ul class="menu">
+				<li><a href="/static/help.shtml"><div class="navimainitem" onclick="followEmbeddedLink(this)">Help</div></a></li>
+				<li><a><n:attr name="href" n:data="serviceURL info" n:render="string"/><div class="navimainitem" onclick="followEmbeddedLink(this)">Service info</div></a></li>
+			</ul>
+		</div>
+		<div n:render="ifdata" class="sidebaritem" n:data="meta _related">
+			<h3>Related</h3>
+			<n:invisible n:render="metahtml">_related</n:invisible>
+		</div>
+		<div class="sidebaritem">
+			<h3>Metadata</h3>
+			<n:invisible title="Examples" n:render="explodableMeta">examplesLink</n:invisible>
+			<n:invisible n:render="explodableMeta">identifier</n:invisible>
+			<n:invisible title="News" n:render="explodableMeta">_news</n:invisible>
+			<n:invisible n:render="explodableMeta">description</n:invisible>
+			<n:invisible title="Keywords" n:render="explodableMeta">subject</n:invisible>
+			<!--<n:invisible n:render="explodableMeta">creator</n:invisible>-->
+			<n:invisible title="Created" n:render="explodableMeta">creationDate</n:invisible>
+			<n:invisible title="Data updated" n:render="explodableMeta">dateUpdated</n:invisible>
+			<n:invisible title="Version" n:render="explodableMeta">version</n:invisible>
+			<n:invisible n:render="explodableMeta">copyright</n:invisible>
+			<n:invisible n:render="explodableMeta">source</n:invisible>
+			<n:invisible title="Reference URL" n:render="explodableMeta">referenceURL</n:invisible>
+		</div>
+		<div class="sidebaritem">
+			<div class="sidebarnote"><a href="/adql">Try ADQL</a> to query our data.</div>
+			<div class="sidebarmicro">
+				<p class="breakable">Please report errors and problems to the <a><n:attr name="href">mailto:<n:invisible n:render="meta">contact.email</n:invisible></n:attr>site operators</a>. Thanks.</p>
+				<p><a href="/static/doc/privpol.shtml" n:render="rootlink">Privacy</a> | <a href="/static/doc/disclaimer.shtml" n:render="rootlink">Disclaimer</a></p>
+				<!--<p n:render="authinfo" />-->
+			</div>
+			<!-- 
+			<n:invisible n:render="ifadmin">
+			<hr/>
+			<a><n:attr name="href" n:render="rootlink">/seffe/<n:invisible n:data="rdId" n:render="string"/></n:attr> Admin me</a>
+			</n:invisible>
+			-->
+		</div>
+	</aside>
+</n:invisible>

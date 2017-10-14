@@ -1,0 +1,14 @@
+table#vizstringtable{
+	border:2px solid gray; 
+	border-collapse: collapse;
+	width: 100%;
+}
+table#vizstringtable * td{
+	border: 1px solid gray;
+	padding: 2pt;
+	text-align: center;
+}
+table#vizstringtable * th{
+	padding: 4pt;
+	text-align: center;
+}

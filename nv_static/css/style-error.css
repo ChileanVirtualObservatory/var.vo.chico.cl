@@ -1,0 +1,17 @@
+body div#header,
+body header{
+	margin-bottom: 30px;
+}
+
+body #page-content h1{
+	border-radius: 2px;
+}
+body #page-content h1 span{
+	color:#125786;
+}
+body #page-content address{
+	border-top: 1px dashed #DDD;
+	padding: 8px 12px;
+	color:#566784;
+	text-align: right;
+}

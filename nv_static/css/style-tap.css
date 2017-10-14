@@ -1,0 +1,21 @@
+div.rddesc{
+	margin-top: 1ex;
+	margin-bottom: 2ex;
+	padding-top: 0.5ex;
+	padding-bottom: 0.5ex;
+	border-top: 1pt dashed #C9DFF5;
+	border-bottom: 1pt dashed #C9DFF5;
+}
+
+div.lidescription{
+	margin:5px 0 0 2em;
+	font-size: 80%;
+	background-color: #EEEEFF;
+	border-radius: 2px;
+	padding: 4px;
+	max-width: 60em;
+}
+/*
+li {
+	margin-top: 0.3ex;
+}*/

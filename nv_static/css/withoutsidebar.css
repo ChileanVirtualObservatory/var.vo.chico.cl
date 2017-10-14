@@ -1,0 +1,6 @@
+body{
+	display: inline-block !important;
+}
+body div#page-content{
+	max-width: auto;
+}
