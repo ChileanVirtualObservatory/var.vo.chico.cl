@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			var formAction = form.action;
 			if(formAction.substr(0,5) == 'http:'){
 				formAction = 'https' + formAction.substr(4);
-				this.querySelector('form#genForm.nevow-form').action = formAction;
+				form.action = formAction;
 			}
 		}
 	}else if(window.location.protocol.substr(0,4) == 'http'){
